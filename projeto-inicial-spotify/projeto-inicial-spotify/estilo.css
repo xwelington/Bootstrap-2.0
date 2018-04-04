@@ -1,0 +1,191 @@
+/* ========================== layout ======================== */
+	
+	
+	html, body, .capa { /* define que tanto o corpo do body quanto ao do html ocuparão 100% da tela */
+
+		height: 100%;
+	}
+
+
+	body {
+
+		background: url('imagens/capa.png'),
+					url('imagens/ruido.png'),
+					linear-gradient(50deg,#ff4169 0,#7c26f8 100%);
+					background-attachment: fixed;
+					font-family: Helvetica, Arial, sans-serif;
+					overflow-x: hidden; /* Remove a barra de rolagem inferior */
+				/*	overflow-y: hidden;  Remove a barra de rolagem lateral */
+	}
+
+
+
+	/* -- Barra de navegação -- */
+
+
+	.img-logo {
+		height: 40px;
+		width: 132px;
+		display: block;
+		background: url('imagens/spotify.svg') no-repeat;
+		background-size: contain; 
+		color: transparent; /* esconde o nome Spotify */
+		}
+
+		nav.navbar-transparente {
+			padding: 15px 0px;
+			background: rgba(0, 0, 0, 0.6 ); /* define a opacidade */
+			border: none;
+		}
+
+		.navbar-brand {
+			
+			padding: 5px 15px;
+
+		}
+
+		.divisor {
+			width: 1px;
+			height: 16px;
+			background:white;
+			margin: 16px 10px;
+		}
+
+		.navbar-inverse .navbar-nav>li>a, footer .nav a {
+			color: white;
+		}
+
+		.navbar-inverse .navbar-nav>li>a:hover, footer .nav a:hover {
+			color: #9bf0e1;
+			background: none; /* retira o background dos botões */
+		}
+	
+		/* -- Imagem de capa -- */
+
+		.capa {
+		
+			display: table;
+			width: 100%; /* define o espaçamento da tabela para ocupar a tela toda*/
+		}
+
+		.texto-capa {
+			text-align: center;
+			color: white;
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		/* -- Botões -- */
+
+		.btn-custom {
+			color: white;
+			border-radius: 500px;
+			-webkit-border-radius: 500px; /* Para que rode em outrar plataformas */
+			-moz-border-radius: 500px;    /* Para que rode em outrar plataformas */
+			padding: 10px 35px;
+			text-transform: uppercase;
+			margin: 0px 15px; 			  /* espaçamento entre os botões */
+			transition: background 0.4s, color 0.4s;
+			}
+
+		.btn-roxo {
+			background: #7c25f8;
+		}
+
+		.btn-roxo:hover {
+			background-color: #6207e3;
+			color: white;
+		}
+
+		.btn-branco {
+			border:2px solid white;
+		}
+
+		.btn-branco:hover {
+			border:2px solid white;
+			background-color: white;
+			color: black;
+		}
+
+
+		/* -- Sessão Serviço -- */
+
+		#servicos {
+			background: white;
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+		.album{
+			padding: 10px 0px 10px 0px;
+		}
+
+		/* -- Recursos -- */
+
+		#recursos {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+		.rotacionar {
+			transform: rotate(30deg);   /* IE 9 */
+			-ms-transform: rotate(30deg);  /* Chrome, Safari, Opera */
+			-webkit-transform: rotate(30deg);
+			padding-left: 80px;
+		}
+
+			/* -- Rodapé -- */
+
+		footer {
+			background: #000;
+			padding: 50px 0px 20px 0px;
+		 /*	position: relative; */
+		}
+
+		.item-rede-social {
+			float: right;
+			padding-top: 60px;
+		}
+
+
+
+/* ========
+/* ========================== Tipografia ======================== */
+
+	h1 {
+		font-size: 100px;
+		font-weight: 900;
+		letter-spacing: -0.05em; /* espaçamento das letras (apropriado para formatação com letras maiores) */
+		margin-bottom: 50px;		
+	}
+
+	h2 {
+		font-size: 50px;
+		font-weight: 700;
+		letter-spacing: -0.04em;
+	}
+
+	h3 {
+		font-size: 35px;
+		font-weight: 700;
+		letter-spacing: -0.04em;
+	}
+
+
+	#servicos h2, #servicos h3 { /* define que o h2 e h3 de dentro de serviços terão essa cor */
+		color: #7c25f8;
+	}
+
+	#recursos h3 { 
+		color: #9bf0e1;
+	}
+
+	#recursos h2, #recursos p { 
+		color: white;
+	}
+
+	#rodape h4 {
+		color: #919496;
+		font-size: 12px;
+		text-transform: uppercase;
+	}
