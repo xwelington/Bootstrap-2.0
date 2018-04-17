@@ -2,19 +2,18 @@
 	
 	
 	html, body, .capa { /* define que tanto o corpo do body quanto ao do html ocuparão 100% da tela */
-
 		height: 100%;
+		overflow:auto;
 	}
 
 
 	body {
-
-		background: url('imagens/capa.png'),
-					url('imagens/ruido.png'),
-					linear-gradient(50deg,#ff4169 0,#7c26f8 100%);
-					background-attachment: fixed;
-					font-family: Helvetica, Arial, sans-serif;
-					overflow-x: hidden; /* Remove a barra de rolagem inferior */
+	background: url('imagens/capa.png'),
+				url('imagens/ruido.png'),
+				linear-gradient(50deg,#ff4169,#7c26f8);
+				background-attachment: fixed;
+				font-family: Helvetica,Arial,sans-serif;
+				overflow-x: hidden; /* Remove a barra de rolagem inferior */
 				/*	overflow-y: hidden;  Remove a barra de rolagem lateral */
 	}
 
@@ -82,9 +81,7 @@
 			border-radius: 500px;
 			-webkit-border-radius: 500px; /* Para que rode em outrar plataformas */
 			-moz-border-radius: 500px;    /* Para que rode em outrar plataformas */
-			padding: 10px 35px;
 			text-transform: uppercase;
-			margin: 0px 15px; 			  /* espaçamento entre os botões */
 			transition: background 0.4s, color 0.4s;
 			}
 
@@ -125,12 +122,13 @@
 		#recursos {
 			padding-top: 20px;
 			padding-bottom: 20px;
+			color: white;
 		}
 
 		.rotacionar {
-			transform: rotate(30deg);   /* IE 9 */
-			-ms-transform: rotate(30deg);  /* Chrome, Safari, Opera */
-			-webkit-transform: rotate(30deg);
+			transform: rotate(30deg);   
+			-ms-transform: rotate(30deg);  /* IE 9 */
+			-webkit-transform: rotate(30deg);/* Chrome, Safari, Opera */
 			padding-left: 80px;
 		}
 
@@ -153,11 +151,48 @@
 /* ========================== Tipografia ======================== */
 
 	h1 {
-		font-size: 100px;
+		font-size: 100px; /* Tamanho da letra */
 		font-weight: 900;
 		letter-spacing: -0.05em; /* espaçamento das letras (apropriado para formatação com letras maiores) */
 		margin-bottom: 50px;		
 	}
+
+	/* Media queries */
+
+	/* xs < 768 */
+	@media screen and (max-width: 767px) {
+		h1 {
+	    font-size: 50px; 
+  		}
+  		.btn-custom {
+    	margin: 10px 15px;
+		}
+	}
+
+	/* sm */
+	@media screen and (min-width: 768px) {
+    	h1 {
+	    font-size: 70px; 
+  		}
+
+	}
+
+	/* md */
+	@media screen and (min-width: 992px) {
+    	h1 {
+	    font-size: 80px; 
+  		}
+	}
+
+	/* lg */
+	@media screen and (min-width: 1200px) {
+    	h1 {
+	    font-size: 100px; 
+  		}
+	}
+
+	/*Fim media queries */		
+
 
 	h2 {
 		font-size: 50px;
@@ -172,20 +207,16 @@
 	}
 
 
-	#servicos h2, #servicos h3 { /* define que o h2 e h3 de dentro de serviços terão essa cor */
-		color: #7c25f8;
+#rodape h4 {
+	color: #919496;
+	font-size: 12px;
+	text-transform: uppercase;
 	}
 
-	#recursos h3 { 
-		color: #9bf0e1;
+#servicos h2, #servicos h3 {
+	color: #7c25f8;
 	}
 
-	#recursos h2, #recursos p { 
-		color: white;
-	}
-
-	#rodape h4 {
-		color: #919496;
-		font-size: 12px;
-		text-transform: uppercase;
+#recursos h3 {
+	color: #9bf0e1;
 	}
